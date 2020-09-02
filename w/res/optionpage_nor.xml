@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="443,335">
+    <Font id="0" name="宋体" size="13" bold="false"/>
+    <Font id="1" name="微软雅黑" size="12"/>
+    <Font id="2" name="微软雅黑" size="15"/>
+    <Font id="3" name="微软雅黑" size="13"/>
+    <Default shared="false" name="Button" value="width=&quot;50&quot; height=&quot;30&quot;" />
+    <VerticalLayout width="441" height="282" bkcolor="#FFFFFFFF">
+        <Text text="格式设置" font="2" width="65" height="20" padding="10,10,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+        <CheckBox text="自动换行" name="change_line" selected="true" padding="20,15,0,0" font="1" width="100" disabledtextcolor="#FFbac0c5" textpadding="20,-5,0,0" align="left" selectedimage="res='31000' restype='png' dest='0,2,16,18'" normalimage="res='31001' restype='png' dest='0,2,16,18'" />
+        <HorizontalLayout float="true" pos="8,77,0,0" width="422" height="1" bkcolor="#FFC0C0C0" />
+        <Text text="颜色设置" font="2" width="66" height="20" padding="10,30,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+        <!--HorizontalLayout height="30" padding="20,15,0,0">
+            <Text text="字体前景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+            <Button text="" name="font_frcolor" padding="0,0,0,0"  bordersize="2" bordercolor="#FF9E9E9E" wdith="50" height="20" bkcolor="#FF000000" />
+        </HorizontalLayout>
+        <HorizontalLayout height="30" padding="20,0,0,0">
+            <Text text="字体背景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+            <Button text="" name="font_bkcolor" padding="0,0,0,0" bordersize="2" bordercolor="#FF9E9E9E" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+        </HorizontalLayout-->
+        <HorizontalLayout height="30" padding="20,15,0,0">
+            <Text text="选中文本背景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+            <Text bordersize="4" bordercolor="#FFA0A0A0" padding="0,0,0,0" width="52" height="22" />
+            <Button text="" name="sel_bkcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+        </HorizontalLayout>
+        <HorizontalLayout height="30" padding="20,0,0,0">
+            <Text text="选中文本前景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+            <Text bordersize="4" bordercolor="#FFA0A0A0" padding="0,0,0,0" width="52" height="22" />
+            <Button text="" name="sel_frcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

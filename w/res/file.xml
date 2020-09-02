@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+ <Font id="0" name="宋体" size="13" bold="false"/>
+ <Font id="1" name="微软雅黑" size="12"/> 
+<VerticalLayout name="filelayout" bkimage="res='152' restype='png'" padding="2" width="163" height="182">
+	<List name="list_filemenu" header="hidden" hole="false" bordersize="1" bordercolor="#FFAEAFB2" inset="1,1,1,1" itemhotimage="res='155' restype='png'">
+		
+      <ListContainerElement font="1" name="menu_New" height="26" inset="32,0,0,0">
+			<Label font="1" text="新建(N)" mouse="false"/>
+			<Label font="1" text="Ctrl+N  " align="right" mouse="false"/>
+		</ListContainerElement>
+    
+		<ListContainerElement name="menu_Open" height="26" inset="32,0,0,0">
+			<Label font="1" text="打开(O)..." mouse="false"/>
+			<Label font="1" text="Ctrl+O  " align="right" mouse="false"/>
+		</ListContainerElement>
+    
+		<ListContainerElement name="menu_Save" height="26" inset="32,0,0,0">
+			<Label font="1" text="保存(S)" mouse="false"/>
+			<Label font="1" text="Ctrl+S  " align="right" mouse="false"/>
+		</ListContainerElement>
+  
+  	<ListContainerElement name="menu_SaveAs" height="26" inset="32,0,0,0">
+			<Label font="1" text="另存为(A)..." mouse="false"/>
+		</ListContainerElement>
+  
+  	<ListContainerElement name="menu_PageSet" height="26" inset="32,0,0,0">
+			<Label font="1" enabled="false" disabledtextcolor="#FFD3D3D3" text="页面设置(U)..." mouse="false"/>
+		</ListContainerElement>
+    		
+    <ListContainerElement name="menu_Print" height="26" inset="32,0,0,0">
+			<Label font="1" enabled="false" disabledtextcolor="#FFD3D3D3" text="打印(P)..." mouse="false"/>
+			<Label font="1" enabled="false" disabledtextcolor="#FFD3D3D3" text="Ctrl+P  " align="right" mouse="false"/>
+		</ListContainerElement>
+  
+  	<ListContainerElement name="menu_Exit" height="26" inset="32,0,0,0">
+			<Label font="1" text="退出(X)" mouse="false"/>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>

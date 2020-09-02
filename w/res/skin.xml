@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="5,5" size="900,500" sizebox="6,6,6,6" mininfo="80,60">
+ <Font id="0" name="宋体" size="13" bold="false"/>
+ <Font id="1" name="微软雅黑" size="12"/> 
+  <Default name="Combo" value="normalimage=&quot;res='118' restype='png' source='0,0,100,22' corner='2,2,20,2'&quot; hotimage=&quot;res='118' restype='png' source='0,22,100,44' corner='2,2,22,2'&quot; pushedimage=&quot;res='118' restype='png' source='0,44,100,66' corner='2,2,22,2'&quot;" />
+  <Default name="VScrollBar" value="thumbcolor=&quot;#FFFF0000&quot;" shared="true" />
+  <VerticalLayout bkcolor="#FFFFFFFF" bordersize="2" bordercolor="#FF202225">
+    <HorizontalLayout name="titlelayout" height="36" bkcolor="#FF202225">
+      <HorizontalLayout>
+        <Control width="10"/>
+        <Label name="apptitle" text="notepad" font="1" textcolor="#FFFFFFFF" />
+      </HorizontalLayout>
+      <HorizontalLayout padding="0,5,0,0" height="25" width="96">
+        <Button name="minbtn" tooltip="最小化" height="18" width="26" normalimage="res='135' restype='png'" hotimage="res='136' restype='png'" pushedimage="res='137' restype='png'"/>
+        <Button name="maxbtn" tooltip="最大化" height="18" width="25" normalimage="res='132' restype='png'" hotimage="res='133' restype='png'" pushedimage="res='134' restype='png'"/>
+        <Button name="restorebtn" visible="false" tooltip="恢复" height="18" width="25" normalimage="res='138' restype='png'" hotimage="res='139' restype='png'" pushedimage="res='140' restype='png'"/>
+        <Button name="closebtn" tooltip="关闭" height="18" width="43" normalimage="res='129' restype='png'" hotimage="res='130' restype='png'" pushedimage="res='131' restype='png'"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    
+   <HorizontalLayout inset="2,0,2,0" height="21">  <!--pushedimage="res='153' restype='png'"-->
+		<List name="menulist" bkcolor="#FFC9C9C9" inset="0,0,0,0" itemalign="center" itembkcolor="#FFC9C9C9" itemaltbk="true" menu="true">
+			<ListHeader name="listheader" height="21" >
+				<ListHeaderItem name="file" text="文件(F)" hotimage="res='151' restype='png'" pushedimage="res='151' restype='png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="edit" text="编辑(E)" hotimage="res='151' restype='png'" pushedimage="res='151' restype='png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="fmat" text="格式(O)" hotimage="res='151' restype='png'" pushedimage="res='151' restype='png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="look" text="查看(V)" hotimage="res='151' restype='png'" pushedimage="res='151' restype='png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="help" text="帮助(H)" hotimage="res='151' restype='png'" pushedimage="res='151' restype='png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+			</ListHeader>
+		</List>
+	</HorizontalLayout>
+    
+
+
+    <VerticalLayout name="body" padding="2,0,2,2">
+      <HorizontalLayout padding="10,10,10,10">
+      </HorizontalLayout>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

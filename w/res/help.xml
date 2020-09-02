@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+ <Font id="0" name="宋体" size="13" bold="false"/>
+ <Font id="1" name="微软雅黑" size="12"/> 
+<VerticalLayout name="helplayout" bkimage="res='152' restype='png'" padding="2" width="163" height="52">
+	<List header="hidden" hole="false" bordersize="1" bordercolor="#FFAEAFB2" inset="1,1,1,1" itemhotimage="res='155' restype='png'">
+		
+      <ListContainerElement font="1" name="menu_Setting" height="26" inset="32,0,0,0">
+			<Label font="1" text="设置(S)" mouse="false"/>
+		</ListContainerElement>
+    <ListContainerElement font="1" name="menu_About" height="26" inset="32,0,0,0">
+      <Label font="1" text="关于notepad(A)" mouse="false"/>
+    </ListContainerElement>
+
+	</List>
+</VerticalLayout>
+</Window>

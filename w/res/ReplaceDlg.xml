@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="5,5" size="449,215" >
+    <Font id="0" shared="true" name="宋体" size="13" bold="false"/>
+    <Font id="1" shared="true" name="微软雅黑" size="12"/>
+    <Default shared="true" name="VScrollBar" value="button1normalimage=&quot;res='101' restype='png' source='0,0,16,16'&quot; button1hotimage=&quot;res='101' restype='png' source='0,0,16,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;res='101' restype='png' source='0,16,16,32' mask='#FFFF00FF'&quot; button1disabledimage=&quot;res='101' restype='png' source='0,0,16,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;res='101' restype='png' source='0,32,16,48' mask='#FFFF00FF'&quot; button2hotimage=&quot;res='101' restype='png' source='0,32,16,48' mask='#FFFF00FF'&quot; button2pushedimage=&quot;res='101' restype='png' source='0,48,16,64' mask='#FFFF00FF'&quot; button2disabledimage=&quot;res='101' restype='png' source='0,32,16,48' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;res='101' restype='png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;res='101' restype='png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;fres='101' restype='png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;res='101' restype='png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;res='101' restype='png' source='0,80,16,96' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;res='101' restype='png' source='0,80,16,96' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;res='101' restype='png' source='0,96,16,112' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;res='101' restype='png' source='0,80,16,96' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;res='101' restype='png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;res='101' restype='png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;res='101' restype='png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;res='101' restype='png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+    <Default shared="true" name="CheckBox" value="disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;20,-5,0,0&quot; align=&quot;left&quot; selectedimage=&quot;res='31000' restype='png' dest='0,2,16,18'&quot; normalimage=&quot;res='31001' restype='png' dest='0,2,16,18'&quot;" />
+    <Default shared="true" name="Edit" value="font=&quot;1&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FFFFFFFF&quot; focusbordercolor=&quot;#FFADADAD&quot; bordercolor=&quot;#FFD8D8D8&quot; width=&quot;180&quot; height=&quot;27&quot;" />
+    <Default shared="true" name="Button" value="width=&quot;100&quot; height=&quot;26&quot; font=&quot;1&quot; normalimage=&quot;res='521' restype='png'&quot; hotimage=&quot;res='522' restype='png'&quot; pushedimage=&quot;res='31002' restype='png'&quot;" />
+
+    <VerticalLayout bkcolor="#FFEFEFEF" bordersize="2" bordercolor="#FF202225">
+        <HorizontalLayout name="findtitlelayout" height="36" bkcolor="#FF202225">
+            <HorizontalLayout>
+                <Control width="10"/>
+                <Label name="apptitle" text="替换" font="1" textcolor="#FFFFFFFF" />
+            </HorizontalLayout>
+            <HorizontalLayout padding="0,5,0,0" height="25" width="96">
+                <Button name="closebtn" padding="45,0,0,0" tooltip="关闭" height="18" width="43" normalimage="res='129' restype='png'" hotimage="res='130' restype='png'" pushedimage="res='131' restype='png'"/>
+            </HorizontalLayout>
+        </HorizontalLayout>
+        
+        <HorizontalLayout width="448" height="36">
+        </HorizontalLayout>
+        <Label text="查找内容(N):" font="1" float="true" pos="18,59,0,0" width="71" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="替换为(P):" font="1" float="true" pos="18,98,0,0" width="71" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="rfind_edit" float="true" font="1" pos="109,54,0,0" />
+        <Edit name="rep_edit" float="true" font="1" pos="109,93,0,0" />
+        <Button name="findnext" text="查找下一个(F)" font="1" float="true" pos="330,52,0,0" />
+        <Button name="replace" text="替换(R)" font="1" float="true" pos="329,87,0,0" />
+        <Button name="replaceall" text="全部替换(A)" font="1" float="true" pos="330,122,0,0" />
+        <Button name="rep_cancel" text="取消" font="1" float="true" pos="330,159,0,0" />
+
+        <HorizontalLayout height="24" padding="18,89,0,0" width="100">
+            <CheckBox text="区分大小写(C" name="ckbox_uorlcase" font="1" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\GroupBox">
+      <UniqueIdentifier>{01f7633e-d08a-4519-957f-320fd59b8261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\wtl">
+      <UniqueIdentifier>{937c400b-913c-423a-a3d9-93b3e078d10b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DuiFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ScintillaCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FontWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FindDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupBox\UIGroupBox.h">
+      <Filter>头文件\GroupBox</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplaceDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GotoDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlapp.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlcrack.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlctrls.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlctrlw.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlctrlx.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlddx.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atldlgs.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atldwm.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlfind.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlframe.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlgdi.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlmisc.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlprint.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlres.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlribbon.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlscrl.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlsplit.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atltheme.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atluser.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="wtl\atlwinx.h">
+      <Filter>头文件\wtl</Filter>
+    </ClInclude>
+    <ClInclude Include="OpctionDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionDlgPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapBtn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EditEx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WTLColorMoudule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFontView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="w.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DuiFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ScintillaCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FontWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FindDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupBox\UIGroupBox.cpp">
+      <Filter>头文件\GroupBox</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GotoDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OpctionDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionDlgPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WTLColorMoudule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UIFontView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="w.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="w.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\close.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\close_h.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\close_p.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\maximize.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\maximize_h.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\maximize_p.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\minimize.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\minimize_h.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\minimize_p.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\restore.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\restore_h.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\restore_p.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\hover.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\push.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_bk.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_hot_bk.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\scroll.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\combo_nor.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\combo_hot.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\checked.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\unchecked.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\btn_hot.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\btn_nor.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\btn_push.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\RadioBtnNor.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\RadioBtnSel.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_sel.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\miku.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\set_hot.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\set_nor.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\picker_close.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ini_hot.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ini_nor.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="res\skin.xml" />
+    <Xml Include="res\file.xml" />
+    <Xml Include="res\edit.xml" />
+    <Xml Include="res\fmat.xml" />
+    <Xml Include="res\help.xml" />
+    <Xml Include="res\look.xml" />
+    <Xml Include="res\fontdlg.xml" />
+    <Xml Include="res\finddlg.xml" />
+    <Xml Include="res\ReplaceDlg.xml" />
+    <Xml Include="res\gotodlg.xml" />
+    <Xml Include="res\aboutdlg.xml" />
+    <Xml Include="res\opctiondlg.xml" />
+    <Xml Include="res\optionpage_nor.xml" />
+    <Xml Include="res\optionpage_ini.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\notepad.ini" />
+    <None Include="res\arrow blue.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ibeam blue.cur">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
