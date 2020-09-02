@@ -1,11 +1,10 @@
 ### 简介：
 使用sintilla和duilib编写的小工具，功能和window记事本类似。  
 支持的快捷键：  
-Ctrl + C 支持无选中清空下对当前行复制  
-Ctrl + X 支持无选中清空下对当前行剪切  
-Ctrl + D 将当前行复制到下一行  
-Ctrl + L 删除当前行  
-Ctrl + J 在当前行插入新的空白行  
+无选中复制(Ctlr+C)、剪切(Ctrl+X)
+Ctrl + D  将当前行复制到下一行  
+Ctrl + L  删除当前行  
+Ctrl + J  在当前行插入新的空白行  
 
 ![](img/note.png)
 
