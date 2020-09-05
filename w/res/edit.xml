@@ -3,7 +3,7 @@
  <Font id="0" name="宋体" size="13" bold="false"/>
  <Font id="1" name="微软雅黑" size="12"/> 
 <VerticalLayout name="editlayout" bkimage="res='152' restype='png'" padding="2" width="163" height="286">
-	<List header="hidden" hole="false" bordersize="1" bordercolor="#FFAEAFB2" inset="1,1,1,1" itemhotimage="res='155' restype='png'">
+	<List name="list_editmenu" header="hidden" hole="false" bordersize="1" bordercolor="#FFAEAFB2" inset="1,1,1,1" itemhotimage="res='155' restype='png'">
 		
       <ListContainerElement font="1" name="menu_Undo" height="26" inset="32,0,0,0">
 			<Label font="1" text="撤销(U)" mouse="false"/>
