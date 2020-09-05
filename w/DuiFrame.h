@@ -11,6 +11,7 @@
 #include <sstream>
 #include <locale>
 #include <codecvt>
+#include <map>
 #include "MenuWnd.h"
 #include "ScintillaCtrl.h"
 #include "FontWnd.h"
@@ -89,11 +90,10 @@ public:
 	void OnPrint();
 	void OnSetting();
 	void OpenFileFromCommandLine(CString szPath);
-
-
+	void OnChildWindowInit(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 
 public:
-	CMenuWnd *m_pMenu;
+
 	enum MENUINFO
 	{
 		FILE_PADDING = 0,
@@ -119,14 +119,27 @@ public:
 	CReplaceDlg *m_ReplaceDlg;
 	CGotoDlg *m_SkipDlg;
 	COpctionDlg *m_OpctionDlg;
-	//COptionDlgPage *m_OpctionPage;
 	CAboutDlg *m_AboutDlg;
 	CLabelUI *pTitle;
 	CString m_szFile;
+
+	std::map<CString, CMenuWnd*> mpage;
+	std::map<CString, CRect> mrect;
+	CMenuWnd *m_pMenuFile, *m_pMenuEdit, *m_pMenuFmat, *m_pMenuLook, *m_pMenuHelp;
+	CListHeaderItemUI *pItem1;
+	CListHeaderItemUI *pItem2;
+	CListHeaderItemUI *pItem3;
+	CListHeaderItemUI *pItem4;
+	CListHeaderItemUI *pItem5;
+	BOOL m_bfocus;
+	void ShowMenuPage(CString szMenu);
+	void HideMenuPage();
+
+
 	int encoding;
 	void SetTitle();
 	void ReadFile(std::string path);
-	void SetMenuInfo(CDuiString lpszType);
+	void SetMenuInfo(CString lpszType);
 	void SetFontInfo(LOGFONT & lf);
 	BOOL CheckModify();
 	BOOL WriteProfileInt(LPCTSTR lpszSection, LPCTSTR lpszEntry,

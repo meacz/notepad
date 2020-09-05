@@ -21,6 +21,12 @@ CMainDlg::~CMainDlg()
 
 BOOL CMainDlg::PreTranslateMessage(MSG* pMsg)
 {
+	if (pMsg->message == WM_LBUTTONDOWN && pMsg->hwnd == m_sciEdit.m_hWnd) {
+		// Çå³ý²Ëµ¥½¹µã
+		::SendMessage(GetParent(), WM_LBUTTONDOWN, 0, 0);
+		return TRUE;
+	}
+
 	if (pMsg->message == WM_KEYDOWN && pMsg->hwnd == m_sciEdit.m_hWnd)
 	{
 		if (GetKeyState(VK_CONTROL) & 0x80 && (char)pMsg->wParam == 'N')
@@ -134,6 +140,7 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 	m_sciEdit.SetCaretLineVisibleAlways(TRUE);
 	m_sciEdit.ShowWindow(SW_SHOW);
 
+	::SendMessage(GetParent(), MSG_CHILDWINDOW_INIT, (WPARAM)m_sciEdit.m_hWnd, 0);
 
 
 	CMessageLoop* pLoop = _Module.GetMessageLoop();

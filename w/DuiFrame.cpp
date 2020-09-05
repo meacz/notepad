@@ -8,7 +8,7 @@ CDuiFrameWnd::CDuiFrameWnd()
 	listHeaderPadding = 0;
 	menuItemHeight = 0;
 	nItemID = 0;
-	m_pMenu = NULL;
+	m_bfocus = FALSE;
 
 }
 
@@ -59,7 +59,6 @@ void CDuiFrameWnd::InitWindow()
 	m_font.CreateFontIndirect(&m_lfont);
 
 	
-	
 	// 跳转
 	m_SkipDlg = new CGotoDlg();
 	m_SkipDlg->Create(m_hWnd, _T("Goto"), 0, 0, 0, 351, 167);
@@ -80,11 +79,61 @@ void CDuiFrameWnd::InitWindow()
 	m_OpctionDlg = new COpctionDlg();
 	m_OpctionDlg->Create(m_hWnd, _T("opction"), 0, 0, 0, 600, 373);
 
+
+	//CRect rtFile, rtEdit, rtFmat, rtLook, rtHelp;
+
+	//CListUI *pList = (CListUI*)m_PaintManager.FindControl(_T("menulist"));
+	//CListHeaderUI *pListHeader = (CListHeaderUI*)pList->FindSubControl(_T("listheader"));
+
+	pItem1 = (CListHeaderItemUI*)m_PaintManager.FindControl(_T("file"));
+	pItem2 = (CListHeaderItemUI*)m_PaintManager.FindControl(_T("edit"));
+	pItem3 = (CListHeaderItemUI*)m_PaintManager.FindControl(_T("fmat"));
+	pItem4 = (CListHeaderItemUI*)m_PaintManager.FindControl(_T("look"));
+	pItem5 = (CListHeaderItemUI*)m_PaintManager.FindControl(_T("help"));
+	
+
+	//rtFile = pItem1->GetPos();
+	//rtEdit = pItem2->GetPos();
+	//rtFmat = pItem3->GetPos();
+	//rtLook = pItem4->GetPos();
+	//rtHelp = pItem5->GetPos();
+
+
+	//mrect.insert(pair<CString, CRect>(_T("file"), rtFile));
+	//mrect.insert(pair<CString, CRect>(_T("edit"), rtEdit));
+	//mrect.insert(pair<CString, CRect>(_T("fmat"), rtFmat));
+	//mrect.insert(pair<CString, CRect>(_T("look"), rtLook));
+	//mrect.insert(pair<CString, CRect>(_T("help"), rtHelp));
+}
+
+
+// CMainDlg Init Send
+void CDuiFrameWnd::OnChildWindowInit(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+	mpage.insert(pair<CString, CMenuWnd*>(_T("file"), m_pMenuFile));
+	mpage.insert(pair<CString, CMenuWnd*>(_T("edit"), m_pMenuEdit));
+	mpage.insert(pair<CString, CMenuWnd*>(_T("fmat"), m_pMenuFmat));
+	mpage.insert(pair<CString, CMenuWnd*>(_T("look"), m_pMenuLook));
+	mpage.insert(pair<CString, CMenuWnd*>(_T("help"), m_pMenuHelp));
+	std::map<CString, CMenuWnd*>::iterator iter;
+
+
+	for (iter = mpage.begin(); iter != mpage.end(); ++iter) {
+		SetMenuInfo(iter->first);
+		iter->second = new CMenuWnd;
+		iter->second->SetMenuID(nItemID);
+		iter->second->Create((HWND)wParam, L"", WS_CHILD, WS_EX_TOPMOST, 0, 0, 163, menuItemHeight);
+
+		CDuiRect rect, rtParent;
+		::GetWindowRect(*(iter->second), &rect);
+		rect.Offset(listHeaderPadding - rect.left, - rect.top);
+		::MoveWindow(*(iter->second), rect.left, rect.top,
+			rect.GetWidth(), rect.GetHeight(), FALSE);
+	}
 }
 
 LRESULT CDuiFrameWnd::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
-
 	bHandled = FALSE;
 	return __super::OnCreate(uMsg, wParam, lParam, bHandled);
 }
@@ -109,37 +158,26 @@ void CDuiFrameWnd::Notify(TNotifyUI& msg)
 
 	if (msg.sType == _T("headerclick")) {
 
-		pTitle = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("apptitle")));
-
 		if (msg.pSender->GetName() == _T("file") |
 			msg.pSender->GetName() == _T("edit") |
 			msg.pSender->GetName() == _T("fmat") |
 			msg.pSender->GetName() == _T("look") |
 			msg.pSender->GetName() == _T("help")
 			) {
+			m_bfocus = TRUE;
+			std::map<CString, CMenuWnd*>::iterator iter;
 
-			CListUI* pList = static_cast<CListUI*>(m_PaintManager.FindControl(_T("menulist")));
-			CVerticalLayoutUI* pVlayout = static_cast<CVerticalLayoutUI*>(m_PaintManager.FindControl(_T("titlelayout")));
-			int listHeaderH = pList->GetHeight();
-			int titleH = pVlayout->GetHeight();
+			// 初始化所有菜单notify消息
+			for (iter = mpage.begin(); iter != mpage.end(); iter++) 
+				iter->second->Init(msg.pSender);
 
-			if (m_pMenu && IsWindow(*m_pMenu)) m_pMenu->Close();
-			CMenuWnd *m_menu = new CMenuWnd();
-			SetMenuInfo(msg.pSender->GetName());
-			m_menu->SetMenuID(nItemID);  // 会被背景区域覆盖 使用 WS_CHILD
-			m_menu->Create(m_hWndChildEdit, _T("menu"), WS_CHILD, WS_EX_TOPMOST, 0, 0, 163, menuItemHeight);
-			m_menu->ShowWindow();
-			m_menu->Init(msg.pSender);
-			::SetFocus(*m_menu);
-
-			CDuiRect rect, rtParent;
-			::GetWindowRect(*m_menu, &rect);
-			rect.Offset(listHeaderPadding - rect.left ,-rect.top);
-			::MoveWindow(*m_menu, rect.left, rect.top,
-				rect.GetWidth(), rect.GetHeight(), FALSE);
-			m_pMenu = m_menu;
+			iter = mpage.find(CString(msg.pSender->GetName().GetData()));
+			iter->second->ShowWindow();
+			::SetFocus(*iter->second);
 		}
 	}
+
+	if (msg.sType == _T("killmenufocus")) m_bfocus = FALSE;
 
 	if (msg.sType == _T("menu_New")) OnFileNew();
 	if (msg.sType == _T("menu_Open")) OnFileOpen();
@@ -212,6 +250,24 @@ LRESULT CDuiFrameWnd::OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHan
 
 LRESULT CDuiFrameWnd::OnLButtonDown(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
+	//CPoint pt(LOWORD(lParam), HIWORD(lParam));
+	//CRect rtFile, rtEdit, rtFmat, rtLook, rtHelp;
+	//rtFile = pItem1->GetPos();
+	//rtEdit = pItem2->GetPos();
+	//rtFmat = pItem3->GetPos();
+	//rtLook = pItem4->GetPos();
+	//rtHelp = pItem5->GetPos();
+
+	//if (!rtFile.PtInRect(pt)) HideMenuPage();
+	//if (!rtEdit.PtInRect(pt)) HideMenuPage();
+	//if (!rtFmat.PtInRect(pt)) HideMenuPage();
+	//if (!rtLook.PtInRect(pt)) HideMenuPage();
+	//if (!rtHelp.PtInRect(pt)) HideMenuPage();
+	
+	//HideMenuPage();
+	m_bfocus = FALSE;
+
+
 	::SetFocus(m_hWnd);
 	bHandled = FALSE;
 	return FALSE;
@@ -219,11 +275,46 @@ LRESULT CDuiFrameWnd::OnLButtonDown(UINT uMsg, WPARAM wParam, LPARAM lParam, BOO
 
 LRESULT CDuiFrameWnd::OnMouseMove(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
+	CPoint pt(LOWORD(lParam), HIWORD(lParam));
+	CRect rtFile, rtEdit, rtFmat, rtLook, rtHelp;
+
+	if (m_bfocus) {
+
+		rtFile = pItem1->GetPos();
+		rtEdit = pItem2->GetPos();
+		rtFmat = pItem3->GetPos();
+		rtLook = pItem4->GetPos();
+		rtHelp = pItem5->GetPos();
+
+		if (rtFile.PtInRect(pt)) ShowMenuPage(_T("file"));
+		if (rtEdit.PtInRect(pt)) ShowMenuPage(_T("edit"));
+		if (rtFmat.PtInRect(pt)) ShowMenuPage(_T("fmat"));
+		if (rtLook.PtInRect(pt)) ShowMenuPage(_T("look"));
+		if (rtHelp.PtInRect(pt)) ShowMenuPage(_T("help"));
+	}
+
 
 	bHandled = FALSE;
 	return FALSE;
 }
 
+
+void CDuiFrameWnd::ShowMenuPage(CString szMenu)
+{
+	std::map<CString, CMenuWnd*>::iterator iter;
+	for (iter = mpage.begin(); iter != mpage.end(); iter++) {
+		iter->second->ShowWindow(_tcscmp(szMenu, iter->first) ? FALSE : TRUE);
+		if(!_tcscmp(szMenu, iter->first))
+			::SetFocus(*(iter->second));
+	}
+}
+
+void CDuiFrameWnd::HideMenuPage()
+{
+	std::map<CString, CMenuWnd*>::iterator iter;
+	for (iter = mpage.begin(); iter != mpage.end(); iter++)
+		iter->second->ShowWindow(FALSE);
+}
 
 LRESULT CDuiFrameWnd::OnDropFiles(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
@@ -528,13 +619,14 @@ LRESULT CDuiFrameWnd::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lPara
 	case MSG_MENU_GOTOLINE:		OnEditGo(); lRes = TRUE; break;
 	case WM_SETFOCUS:			::SetFocus(m_hWndChildEdit); lRes = TRUE; break;
 	case WM_KILLFOCUS:			::SetFocus(m_hWndChildEdit); lRes = TRUE; break;
+	case MSG_CHILDWINDOW_INIT:	OnChildWindowInit(uMsg, wParam, lParam, bHandled); lRes = TRUE; break;
 	}
 
 	bHandled = FALSE;
 	return lRes;
 }
 
-void CDuiFrameWnd::SetMenuInfo(CDuiString lpszType)
+void CDuiFrameWnd::SetMenuInfo(CString lpszType)
 {
 	if (lpszType == _T("file")) {
 		listHeaderPadding = FILE_PADDING;

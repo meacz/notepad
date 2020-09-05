@@ -27,6 +27,7 @@ public:
 	UINT uMenuID = 0;
 	void SetMenuID(UINT nId){ uMenuID = nId; }
 	HCURSOR m_MenuCur;
+	void ItemSelectFalse();
 
 protected:
 

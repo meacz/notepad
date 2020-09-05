@@ -34,6 +34,8 @@ CDuiString CMenuWnd::GetSkinFolder()
 
 void CMenuWnd::OnExit(TNotifyUI& msg)
 {
+	ItemSelectFalse();
+	::ShowWindow(m_hWnd, SW_HIDE);
 	//Close();
 }
 
@@ -45,7 +47,8 @@ void CMenuWnd::Init(CControlUI* pOwner)
 void CMenuWnd::Notify(TNotifyUI& msg)
 {
 	if (msg.sType == _T("itemselect")){
-		Close();
+		OnExit(msg);
+		m_pOwner->GetManager()->SendNotify(m_pOwner, _T("killmenufocus"), 0, 0, true);
 	}
 	else if (msg.sType == _T("itemclick")) {
 		CDuiString szMsg;
@@ -84,6 +87,7 @@ void CMenuWnd::Notify(TNotifyUI& msg)
 void CMenuWnd::InitWindow()
 {
 	m_MenuCur = LoadCursor(NULL, MAKEINTRESOURCE(IDC_ARROW));
+
 }
 
 void CMenuWnd::OnFinalMessage(HWND hWnd)
@@ -100,7 +104,9 @@ LRESULT CMenuWnd::OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled
 
 LRESULT CMenuWnd::OnKillFocus(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
-	Close();
+	ItemSelectFalse();
+	::ShowWindow(m_hWnd, SW_HIDE);
+	//Close();
 	return 0;
 }
 
@@ -119,7 +125,20 @@ LRESULT CMenuWnd::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, B
 	return FALSE;
 }
 
+void CMenuWnd::ItemSelectFalse()
+{
+	CListUI *pFileList = (CListUI*)m_PaintManager.FindControl(_T("list_filemenu"));
+	CListUI *pEditList = (CListUI*)m_PaintManager.FindControl(_T("list_editmenu"));
+	CListUI *pFmatList = (CListUI*)m_PaintManager.FindControl(_T("list_fmatmenu"));
+	CListUI *pLookList = (CListUI*)m_PaintManager.FindControl(_T("list_lookmenu"));
+	CListUI *pHelpList = (CListUI*)m_PaintManager.FindControl(_T("list_helpmenu"));
 
+	if (pFileList) pFileList->SelectItem(-1);
+	if (pEditList) pEditList->SelectItem(-1);
+	if (pFmatList) pFmatList->SelectItem(-1);
+	if (pLookList) pLookList->SelectItem(-1);
+	if (pHelpList) pHelpList->SelectItem(-1);
+}
 
 
 
