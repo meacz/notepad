@@ -23,8 +23,8 @@ BOOL CMainDlg::PreTranslateMessage(MSG* pMsg)
 {
 	if (pMsg->message == WM_LBUTTONDOWN && pMsg->hwnd == m_sciEdit.m_hWnd) {
 		// Çå³ý²Ëµ¥½¹µã
-		::SendMessage(GetParent(), WM_LBUTTONDOWN, 0, 0);
-		return TRUE;
+		::SendMessage(GetParent(), MSG_KILLMENUFOCUS, 0, 0);
+		return FALSE;
 	}
 
 	if (pMsg->message == WM_KEYDOWN && pMsg->hwnd == m_sciEdit.m_hWnd)

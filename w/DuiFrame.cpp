@@ -15,6 +15,11 @@ CDuiFrameWnd::CDuiFrameWnd()
 CDuiFrameWnd::~CDuiFrameWnd()
 {
 	PostQuitMessage(0);
+	std::map<CString, CMenuWnd*>::iterator iter;
+
+	for (iter = mpage.begin(); iter != mpage.end(); ++iter)
+		iter->second = NULL;
+	mpage.clear();
 }
 
 LPCTSTR CDuiFrameWnd::GetWindowClassName() const
@@ -266,9 +271,8 @@ LRESULT CDuiFrameWnd::OnLButtonDown(UINT uMsg, WPARAM wParam, LPARAM lParam, BOO
 	
 	//HideMenuPage();
 	m_bfocus = FALSE;
-
-
 	::SetFocus(m_hWnd);
+
 	bHandled = FALSE;
 	return FALSE;
 }
@@ -314,6 +318,12 @@ void CDuiFrameWnd::HideMenuPage()
 	std::map<CString, CMenuWnd*>::iterator iter;
 	for (iter = mpage.begin(); iter != mpage.end(); iter++)
 		iter->second->ShowWindow(FALSE);
+}
+
+void CDuiFrameWnd::OnKillMenuFocus()
+{
+	m_bfocus = FALSE;
+	::SetFocus(m_hWnd);
 }
 
 LRESULT CDuiFrameWnd::OnDropFiles(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
@@ -620,6 +630,7 @@ LRESULT CDuiFrameWnd::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lPara
 	case WM_SETFOCUS:			::SetFocus(m_hWndChildEdit); lRes = TRUE; break;
 	case WM_KILLFOCUS:			::SetFocus(m_hWndChildEdit); lRes = TRUE; break;
 	case MSG_CHILDWINDOW_INIT:	OnChildWindowInit(uMsg, wParam, lParam, bHandled); lRes = TRUE; break;
+	case MSG_KILLMENUFOCUS:		OnKillMenuFocus(); lRes = TRUE; break;
 	}
 
 	bHandled = FALSE;

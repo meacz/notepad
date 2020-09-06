@@ -91,6 +91,7 @@ public:
 	void OnSetting();
 	void OpenFileFromCommandLine(CString szPath);
 	void OnChildWindowInit(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+	void OnKillMenuFocus();
 
 public:
 
