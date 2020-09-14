@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" size="386,192" >
+    <Font id="0" shared="true" name="宋体" size="13" bold="false"/>
+    <Font id="1" shared="true" name="微软雅黑" size="12"/>
+    <Font id="2" shared="true" name="微软雅黑" size="15"/>
+    <Default shared="true" name="Button" value="width=&quot;69&quot; height=&quot;23&quot; font=&quot;1&quot; normalimage=&quot;file='btn_nor.png'&quot; hotimage=&quot;file='btn_hot.png'&quot; pushedimage=&quot;file='btn_push.png'&quot;" />
+    <VerticalLayout bkcolor="#FFEFEFEF" bordersize="2" bordercolor="#FF202225">
+        <HorizontalLayout name="findtitlelayout" height="36" bkcolor="#FF202225">
+            <HorizontalLayout>
+                <Control width="10"/>
+                <Label name="apptitle" font="1" text="记事本" textcolor="#FFFFFFFF" />
+            </HorizontalLayout>
+            <HorizontalLayout padding="0,5,0,0" height="25" width="96">
+                <Button name="closebtn" padding="45,0,0,0" tooltip="关闭" height="18" width="43" normalimage="file='close.png'" hotimage="file='close_h.png'" pushedimage="file='close_p.png'"/>
+            </HorizontalLayout>
+        </HorizontalLayout>
+        <VerticalLayout bkcolor="#FFFFFFFF" padding="2,0,2,0">
+                <Label name="labbel_text2" font="2" endellipsis="true" valign="center" text="" padding="20,15,0,0" width="370" height="70" textcolor="#FF003399" />
+        </VerticalLayout>
+        <VerticalLayout height="45">
+            <HorizontalLayout>
+                <Button text="是(Y)" font="1" name="btn_ok" padding="130,10,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Button text="否(N)" font="1" name="btn_no" padding="5,10,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Button text="取消" font="1" name="btn_cel" padding="5,10,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </HorizontalLayout>
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

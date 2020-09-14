@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" size="600,373" mininfo="600,373">
+    <Font id="0" name="宋体" size="13" bold="false"/>
+    <Font id="1" name="微软雅黑" size="12"/>
+    <Font id="2" name="微软雅黑" size="14"/>
+    <VerticalLayout bkcolor="#FFFFFFFF" bordersize="2" bordercolor="#FF202225">
+        <HorizontalLayout name="titlelayout" height="36" bkcolor="#FF202225">
+            <HorizontalLayout>
+                <Control width="10"/>
+                <Label name="apptitle" text="opction" font="1" textcolor="#FFFFFFFF" />
+            </HorizontalLayout>
+            <HorizontalLayout padding="0,5,0,0" height="25" width="96">
+                <Button name="closebtn" padding="45,0,0,0" tooltip="关闭" height="18" width="43" normalimage="file='close.png'" hotimage="file='close_h.png'" pushedimage="file='close_p.png'"/>
+            </HorizontalLayout>
+        </HorizontalLayout>
+        <VerticalLayout name="setting_norsetting" width="132" height="335" padding="15,10,0,0">
+            <Button name="normal_set" text="常规设置" textpadding="8,-12,0,0" normalimage="file='set_nor.png' dest='0,0,16,15'" hotimage="file='set_hot.png' dest='0,0,16,15'" pushedimage="file='set_hot.png' dest='0,0,16,15'" focusedimage="file='set_hot.png' dest='0,0,16,15'" bordersize="0" bkcolor="#FFFFFFFF" padding="10,5,0,0" textcolor="#FF353535" hottextcolor="#FFF3B568" focusedtextcolor="#FFF3B568" font="2" />
+            <Button name="normal_col" text="颜色设置" textpadding="8,-12,0,0" normalimage="file='color_n.png' dest='0,0,16,15'" hotimage="file='color_h.png' dest='0,0,16,15'" pushedimage="file='color_h.png' dest='0,0,16,15'" focusedimage="file='color_h.png' dest='0,0,16,15'" bordersize="0" bkcolor="#FFFFFFFF" padding="10,5,0,0" textcolor="#FF353535" hottextcolor="#FFF3B568" focusedtextcolor="#FFF3B568" font="2" />
+        </VerticalLayout>
+        <VerticalLayout float="true" pos="142,38,0,0" width="1" height="329" bkcolor="#FFC0C0C0" />
+        <VerticalLayout name="settime_page" float="true" pos="153,36,0,0" width="443" height="335" />
+    </VerticalLayout>
+</Window>

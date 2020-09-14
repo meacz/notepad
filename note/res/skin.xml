@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="5,5" size="900,500" sizebox="6,6,6,6" mininfo="80,60">
+ <Font id="0" name="宋体" size="13" bold="false"/>
+ <Font id="1" name="微软雅黑" size="12"/> 
+  <VerticalLayout name="vlayout" bkcolor="#FFFFFFFF" bordersize="2" bordercolor="#FF202225">
+    <HorizontalLayout name="titlelayout" height="36" bkcolor="#FF202225">
+      <HorizontalLayout>
+        <Control width="10"/>
+        <Label name="apptitle" text="notepad" font="1" textcolor="#FFFFFFFF" />
+      </HorizontalLayout>
+      <HorizontalLayout padding="0,5,0,0" height="25" width="96">
+        <Button name="minbtn" tooltip="最小化" height="18" width="26" normalimage="file='minimize.png'" hotimage="file='minimize_h.png'" pushedimage="file='minimize_p.png'"/>
+        <Button name="maxbtn" tooltip="最大化" height="18" width="25" normalimage="file='maximize.png'" hotimage="file='maximize_h.png'" pushedimage="file='maximize_p.png'"/>
+        <Button name="restorebtn" visible="false" tooltip="恢复" height="18" width="25" normalimage="file='restore.png'" hotimage="file='restore_h.png'" pushedimage="file='restore_p.png'"/>
+        <Button name="closebtn" tooltip="关闭" height="18" width="43" normalimage="file='close.png'" hotimage="file='close_h.png'" pushedimage="file='close_p.png'"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    
+   <HorizontalLayout inset="2,0,2,0" height="21">  <!--pushedimage="res='153'"-->
+		<List name="menulist" bkcolor="#FFC9C9C9" inset="0,0,0,0" itemalign="center" itembkcolor="#FFC9C9C9" itemaltbk="true" menu="true">
+			<ListHeader name="listheader" height="21" >
+				<ListHeaderItem name="file" text="文件(F)" hotimage="file='hover.png'" pushedimage="file='hover.png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="edit" text="编辑(E)" hotimage="file='hover.png'" pushedimage="file='hover.png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="fmat" text="格式(O)" hotimage="file='hover.png'" pushedimage="file='hover.png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="look" text="查看(V)" hotimage="file='hover.png'" pushedimage="file='hover.png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+				<ListHeaderItem name="help" text="帮助(H)" hotimage="file='hover.png'" pushedimage="file='hover.png'" textcolor="#FF000000" bkcolor="#FFC9C9C9" font="1" width="60"  sepwidth="0" />
+			</ListHeader>
+		</List>
+	</HorizontalLayout>
+    
+
+
+    <VerticalLayout name="body" padding="2,0,2,2">
+      <HorizontalLayout padding="10,10,10,10">
+      </HorizontalLayout>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

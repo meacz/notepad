@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+ <Font id="0" name="宋体" size="13" bold="false"/>
+ <Font id="1" name="微软雅黑" size="12"/> 
+<VerticalLayout name="fmatlayout" bkimage="file='menu_bk.png'" padding="2" width="163" height="52">
+	<List name="list_fmatmenu" header="hidden" hole="false" bordersize="1" bordercolor="#FFAEAFB2" inset="1,1,1,1" itemhotimage="file='menu_hot_bk.png'">
+		
+      <ListContainerElement font="1" name="menu_Nextline" height="26" inset="32,0,0,0">
+			<Label font="1" enabled="false" disabledtextcolor="#FFD3D3D3" text="自动换行(W)" mouse="false"/>
+		</ListContainerElement>
+    
+		<ListContainerElement name="menu_Font" height="26" inset="32,0,0,0">
+			<Label font="1" text="字体(F)..." mouse="false"/>
+		</ListContainerElement>
+
+	</List>
+</VerticalLayout>
+</Window>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="443,335">
+    <Font id="0" name="宋体" size="13" bold="false"/>
+    <Font id="1" name="微软雅黑" size="12"/>
+    <Font id="2" name="微软雅黑" size="15"/>
+    <Font id="3" name="微软雅黑" size="13"/>
+    <VerticalLayout width="441" height="282" bkcolor="#FFFFFFFF">
+        <Text text="格式设置" font="2" width="65" height="20" padding="10,10,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+        <CheckBox text="自动换行" name="change_line" selected="true" padding="20,15,0,0" font="1" width="100" disabledtextcolor="#FFbac0c5" textpadding="20,-5,0,0" align="left" selectedimage="file='checked.png' dest='0,2,16,18'" normalimage="file='unchecked.png' dest='0,2,16,18'" />
+        <HorizontalLayout float="true" pos="8,77,0,0" width="422" height="1" bkcolor="#FFC0C0C0" />
+        <Text text="配置文件" font="2" width="65" height="20" padding="10,30,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+        <HorizontalLayout height="30" padding="20,15,0,0">
+            <Edit name="edit_inipath" padding="0,0,0,0" font="1" bordersize="1" bkcolor="#FFFFFFFF" focusbordercolor="#FFADADAD" bordercolor="#FFD8D8D8" width="180" height="24" />
+            <Button name="btn_path" padding="15,0,0,0" text="转到"  font="1" width="40" height="24" normalimage="file='btn_nor.png'" hotimage="file='btn_hot.png'" pushedimage="file='btn_push.png'" tooltip="打开配置文件所在路径" />
+            <Button name="btn_defset" text="重置设置" padding="15,0,0,0" bkcolor="#FF00FFFF" width="65" height="24" font="1" normalimage="file='btn_nor.png'" hotimage="file='btn_hot.png'" pushedimage="file='btn_push.png'" tooltip="重启软件后生效" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

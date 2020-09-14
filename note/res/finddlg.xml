@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="5,5" size="430,170" >
+    <Font id="0" shared="true" name="宋体" size="13" bold="false"/>
+    <Font id="1" shared="true" name="微软雅黑" size="12"/> 
+    <Default shared="true" name="CheckBox" value="disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;20,-5,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='unchecked.png' dest='0,2,16,18'&quot;" />
+    <Default shared="true" name="Option" value="textpadding=&quot;18,2,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='RadioBtnSel.png' source='0,0,13,13' dest='0,5,14,19'&quot; normalimage=&quot;file='RadioBtnNor.png' source='0,0,13,13' dest='0,5,14,19'&quot;" />
+    <VerticalLayout bkcolor="#FFEFEFEF" bordersize="2" bordercolor="#FF202225">
+        <HorizontalLayout name="findtitlelayout" height="36" bkcolor="#FF202225">
+            <HorizontalLayout>
+                <Control width="10"/>
+                <Label name="apptitle" text="查找" font="1" textcolor="#FFFFFFFF" />
+            </HorizontalLayout>
+                <HorizontalLayout padding="0,5,0,0" height="25" width="96">
+                    <Button name="closebtn" padding="45,0,0,0" tooltip="关闭" height="18" width="43" normalimage="file='close.png'" hotimage="file='close_h.png'" pushedimage="file='close_p.png'"/>
+                </HorizontalLayout>
+        </HorizontalLayout>
+
+        <HorizontalLayout padding="2,0,2,0">
+            <VerticalLayout>
+                <HorizontalLayout padding="10,10,0,0" height="30">
+                    <Label text="查找内容(N):" font="1" width="80" />
+                    <Edit name="find_edit" padding="0,3,0,0" font="1" bordersize="1" bkcolor="#FFFFFFFF" focusbordercolor="#FFADADAD" bordercolor="#FFD8D8D8" width="180" height="27" />
+                </HorizontalLayout>
+
+                <HorizontalLayout>
+                    <VerticalLayout padding="10,40,0,0" width="100">
+                        <CheckBox name="find_lowercase" selected="false" text="区分大小写(C)" font="1" width="100" />
+                    </VerticalLayout>
+                    <VerticalLayout padding="15,20,0,0">
+                        <GroupBox text="方向" width="146" bordersize="1" borderround="1,1" height="50" bordercolor="#FF989898" font="1"/>
+                        <HorizontalLayout height="26" padding="0,-35,0,0">
+                            <Option name="find_up" text="向上(U)" padding="5,0,0,0" width="100" font="1" group="RadioBoxTest" />
+                            <Option name="find_down" text="向下(D)" selected="true" padding="-24,0,0,0" font="1" width="100" group="RadioBoxTest" />
+                        </HorizontalLayout>
+                    </VerticalLayout>
+                </HorizontalLayout>
+            </VerticalLayout>
+            
+            <VerticalLayout width="150" height="100">
+                <Button padding="10,13,0,0" name="find_ok" text="查找下一个(F)" width="100" height="26" font="1" normalimage="file='btn_nor.png'" hotimage="file='btn_hot.png'" pushedimage="file='btn_push.png'" />
+                <Button padding="10,17,0,0" name="find_cancel" text="取消" width="100" height="26" font="1" normalimage="file='btn_nor.png'" hotimage="file='btn_hot.png'" pushedimage="file='btn_push.png'" />
+                <VerticalLayout height="30" />
+            </VerticalLayout>
+        </HorizontalLayout>
+
+    </VerticalLayout>
+
+</Window>
+
+

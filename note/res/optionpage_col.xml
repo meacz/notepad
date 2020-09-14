@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="443,335">
+    <Font id="0" name="宋体" size="13" bold="false"/>
+    <Font id="1" name="微软雅黑" size="12"/>
+    <Font id="2" name="微软雅黑" size="15"/>
+    <Font id="3" name="微软雅黑" size="13"/>
+    <Default shared="false" name="Button" value="width=&quot;50&quot; height=&quot;30&quot;" />
+    <VerticalLayout width="441" height="282" bkcolor="#FFFFFFFF">
+        <Text text="颜色设置" font="2" width="66" height="20" padding="10,10,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+        <HorizontalLayout>
+            
+            <VerticalLayout>
+                <HorizontalLayout height="30" padding="20,15,0,0">
+                    <Text text="选中文本背景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="sel_bkcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="20,0,0,0">
+                    <Text text="选中文本前景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="sel_frcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="20,0,0,0">
+                    <Text text="界面背景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="edit_bkcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="20,0,0,0">
+                    <Text text="文本" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="text_frcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="20,0,0,0">
+                    <Text text="光标行背景色" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="curline_bkcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="20,0,0,0">
+                    <Text text="文本前景色(多选)" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="multitext_frcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="20,0,0,0">
+                    <Text text="文本背景色(多选)" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="multitext_bkcolor" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="20,0,0,0">
+                    <Text text="光标(多选)" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="multicur_color" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+            </VerticalLayout>
+            
+            <VerticalLayout>
+                <HorizontalLayout height="30" padding="20,15,0,0">
+                    <Text text="光标" width="150" height="20" font="1" float="false" padding="0,1,0,0" />
+                    <Text bordersize="4" bordercolor="#FFA0A0A0" padding="-30,0,0,0" width="52" height="22" />
+                    <Button text="" name="cursor_color" padding="-51,1,0,0" bordersize="1" bordercolor="#FFFFFFFF" wdith="50" height="20" bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+            </VerticalLayout>
+            
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>
